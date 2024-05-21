@@ -1,0 +1,35 @@
+:root {
+  --site-text-color: #2f3542;
+  --site-bg-color: #ced6e0;
+  --site-link-color: #07c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 1em/1.6 sans-serif;
+  color: var(--site-text-color);
+  background-color: var(--site-bg-color);
+}
+
+a {
+  color: var(--site-link-color);
+}
+
+p {
+  margin: 0;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
