@@ -6,7 +6,6 @@
   --tab-content-bg-color: #f1f2f6;
 }
 
-
 .tab-nav {
   overflow-x: scroll;
   scrollbar-width: none;
@@ -19,9 +18,11 @@
 }
 
 .tab-list {
+  width: fit-content; /* Let the tab-list shrink to fit its content */
+  min-width: 100%;
   color: var(--tab-text-color);
   display: flex;
-  gap: .5em;
+  gap: 0.5em;
   border-bottom: 2px solid var(--tab-border-color);
   margin: 0;
   padding: 0;
@@ -29,19 +30,18 @@
 
 .tab-list li {
   display: block;
+  margin-bottom: -2px;
 }
-
-
 
 .tab-btn {
   font: inherit;
-  padding: .75em 1em;
+  padding: 0.75em 1em;
   background-color: transparent;
   border: 2px solid var(--tab-border-color);
-  margin-bottom: -2px;
   border-width: 0 0 2px;
   cursor: pointer;
   color: inherit;
+  white-space: nowrap;
 }
 
 .tab-btn:not(.tab-btn--active):hover {
@@ -57,5 +57,5 @@
   margin-top: 1em;
   padding: 1em;
   background-color: var(--tab-content-bg-color);
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
