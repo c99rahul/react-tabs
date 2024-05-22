@@ -6,7 +6,7 @@ const TabItem: React.FC<TabItemProps> = ({ label, children }) => (
     className="tab-content"
     role="tabpanel"
     aria-labelledby={`tab-${sanitizeForId(label)}`}
-    id={`tab-content-${sanitizeForId(label)}`}
+    id={`panel-${sanitizeForId(label)}`}
   >
     {children}
   </div>

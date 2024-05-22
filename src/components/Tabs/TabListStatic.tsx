@@ -5,7 +5,7 @@ import { TabItemProps, TabListProps } from "@/types/TabTypes";
 import { sanitizeForId } from "@/utils/stringUtils";
 import "./Tabs.css";
 
-const TabList: React.FC<TabListProps> = ({ children, activeTabIndex = 0 }) => {
+const TabListStatic: React.FC<TabListProps> = ({ children, activeTabIndex = 0 }) => {
   const [activeTab, setActiveTab] = useState(activeTabIndex);
 
   const handleTabClick = (index: number) => {
@@ -40,9 +40,11 @@ const TabList: React.FC<TabListProps> = ({ children, activeTabIndex = 0 }) => {
           ))}
         </ul>
       </nav>
-      {tabs[activeTab]}
+
+      {tabs.map((tab, index) => (
+        <div className={`tab-panel ${activeTab === index ? "tab-panel--active" : "tab-panel--hidden"}`}>{tab}</div>))}
     </div>
   );
 };
 
-export default TabList;
+export default TabListStatic;

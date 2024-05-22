@@ -59,3 +59,15 @@
   background-color: var(--tab-content-bg-color);
   border-radius: 0.5em;
 }
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel--active {
+  display: block;
+}
+
+.tab-panel--hidden {
+  display: none;
+}
