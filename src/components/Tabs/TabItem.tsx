@@ -1,15 +1,26 @@
 import { TabItemProps } from "@/types/TabTypes";
 import { sanitizeForId } from "@/utils/stringUtils";
+import { Collapse } from "react-bootstrap";
 
-const TabItem: React.FC<TabItemProps> = ({ label, children }) => (
-  <div
-    className="tab-content"
-    role="tabpanel"
-    aria-labelledby={`tab-${sanitizeForId(label)}`}
-    id={`panel-${sanitizeForId(label)}`}
-  >
-    {children}
-  </div>
+interface TabItemPropsAnimated extends TabItemProps {
+  isActive?: boolean;
+}
+
+const TabItem: React.FC<TabItemPropsAnimated> = ({
+  label,
+  children,
+  isActive = false,
+}) => (
+  <Collapse in={isActive}>
+    <div
+      className={`tab-content p-3 bg-light`}
+      role="tabpanel"
+      aria-labelledby={`tab-${sanitizeForId(label)}`}
+      id={`panel-${sanitizeForId(label)}`}
+    >
+      {children}
+    </div>
+  </Collapse>
 );
 
 export default TabItem;
