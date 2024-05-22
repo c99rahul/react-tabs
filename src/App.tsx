@@ -7,16 +7,18 @@ function App() {
   return (
     <div className="App">
       <p>
-        Here's a recipe for a classic Avocado Toast, which also showcases a Tab Component built with React, TypeScript, and CSS. This handy
-        component lets you easily navigate through different steps and
-        variations of the recipe.
+        Here's a recipe for a classic Avocado Toast, which also showcases a Tab
+        Component built with React, TypeScript, and CSS. This handy component
+        lets you easily navigate through different steps and variations of the
+        recipe.
       </p>
 
       <p>
-        <a href="https://github.com/c99rahul/react-tabs/">Check out the source here</a>, and give it a star if you like it. Now,
-        explore the different sections of the recipe, including ingredients,
-        prep time, and nutritional value. I hope you enjoy the recipe and find
-        the component useful for your own projects.
+        <a href="https://github.com/c99rahul/react-tabs/">
+          Check out the source here
+        </a>
+        , and give it a star if you like it. I hope you enjoy the recipe and
+        find the component useful for your own projects.
       </p>
       <TabList activeTabIndex={4}>
         <TabItem label="Ingredients">

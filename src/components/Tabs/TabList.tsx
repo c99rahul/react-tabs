@@ -26,7 +26,6 @@ const TabList: React.FC<TabListProps> = ({ children, activeTabIndex = 0 }) => {
               <button
                 key={`tab-btn-${index}`}
                 role="tab"
-                id={`tab-${sanitizeForId(tab.props.label)}`}
                 aria-controls={`tab-${sanitizeForId(tab.props.label)}`}
                 aria-selected={activeTab === index}
                 onClick={() => handleTabClick(index)}
