@@ -3,7 +3,7 @@
   --tab-text-color--active: var(--site-text-color, #222);
   --tab-text-color--highlight: var(--site-link-color, #07c);
   --tab-border-color: #ddd;
-  --tab-content-bg-color: #f1f2f6;
+  --tab-panel-bg-color: #f1f2f6;
 }
 
 .tab-nav {
@@ -53,21 +53,9 @@
   border-color: var(--tab-text-color--highlight);
 }
 
-.tab-content {
+.tab-panel {
   margin-top: 1em;
   padding: 1em;
-  background-color: var(--tab-content-bg-color);
+  background-color: var(--tab-panel-bg-color);
   border-radius: 0.5em;
-}
-
-.tab-panel {
-  display: none;
-}
-
-.tab-panel--active {
-  display: block;
-}
-
-.tab-panel--hidden {
-  display: none;
 }

@@ -1,8 +1,5 @@
 import TabItem from "@/components/Tabs/TabItem";
 import TabList from "@/components/Tabs/TabList";
-import TabListStatic from "@/components/Tabs/TabListStatic";
-
-
 import "./App.css";
 
 function App() {
@@ -22,7 +19,7 @@ function App() {
         , and give it a star if you like it. I hope you enjoy the recipe and
         find the component useful for your own projects.
       </p>
-      <TabListStatic activeTabIndex={4}>
+      <TabList activeTabIndex={4}>
         <TabItem label="Ingredients">
           <ul>
             <li>1 ripe avocado</li>
@@ -123,7 +120,7 @@ function App() {
         <TabItem label="Final Outcome">
           <img src="//source.unsplash.com/7GO11y7bznw/1920x1080" />
         </TabItem>
-      </TabListStatic>
+      </TabList>
     </div>
   );
 }

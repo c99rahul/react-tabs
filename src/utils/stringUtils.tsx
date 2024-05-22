@@ -7,5 +7,3 @@ const sanitizeForId = (label: string) => {
 };
 
 export { sanitizeForId };
-
-
